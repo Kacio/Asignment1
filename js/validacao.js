@@ -12,7 +12,7 @@ function validaForm(event){
 	if(nome.value==""){
 		span_nome.textContent = "Por favor digite o seu nome Completo";
 		nome.focus();
-		
+		return;
 	}else{
 		span_nome.textContent = "";
 	}
@@ -20,7 +20,7 @@ function validaForm(event){
 	if(email.value == ""){
 		span_email.textContent = "Por favor digite o seu email";
 		email.focus();
-		
+		return;
 	}else{
 		span_email.textContent="";	
 	}
@@ -28,7 +28,7 @@ function validaForm(event){
 	if(empresa.value=="")	{
 		span_empresa.textContent = "Por favor digite o nome da empresa";
 		email.focus();
-		
+		return;	
 	}else{
 		span_empresa.textContent="";
 	}
