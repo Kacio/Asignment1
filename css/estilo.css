@@ -1,0 +1,267 @@
+
+.cabecalho-principal{
+	width: 95.2%;
+	background-image: url("../img/banner.jpg");
+	display: flex;
+	padding: 10px;
+	padding-right: 4%;
+	margin: 0;	
+	font-family: "Arial";
+
+}
+.cabecalho-principal .container{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;	
+	width: 85%;
+	margin:0;
+	color: white;
+}
+
+.titulo-cabecalho-principal{
+	margin-left: 0;
+	font-size: 2.5rem;		
+}
+
+.logo{
+	width: 110px;
+	height: 110px;	
+	border-radius: 60px;
+	margin-left: 4%;
+}
+
+.menu-navegacao{
+	display: flex;
+	
+
+}
+
+.menu-navegacao a {
+	text-decoration: none;
+	border: 1px solid grey;
+	padding: 5px;
+	margin-right: 10px;
+	color: white;
+	background-color: black;
+
+}
+.menu-navegacao a:hover {
+	background-color: white;
+	color: black;
+
+}
+	
+.rodape{
+	opacity: .5;	
+	background-color: black;
+	color: white;
+	bottom: 0;
+	border: 1px solid black;
+	padding: .5em;
+	position: fixed;
+	margin-right: 9px;
+	left: 8px;
+	right: 0;
+	font-family: "Arial"
+	
+}
+.container-rodape{
+	width: 100%;
+	display: flex;	
+}
+.conteudo-principal{
+	width: 100%;
+	background-color: #FF8C00;
+		font-family: "Arial";
+}
+
+.apresentacao{
+	width: 77%;
+	margin: auto;
+	
+	background-color: #EEE5DE;
+	
+	padding-left: 5%;
+	padding-right: 5%;	
+	padding-bottom: 2%;
+}
+
+.conteudo-principal .container{
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.imagem-aprendizado{
+	
+	width: 35%;
+
+    
+}
+
+.imagem-aprendizado img{
+	height: 30em;
+	width: 22rem;
+	margin-left: 15px;
+	margin-top: 80px;
+	box-shadow: 5px 5px black;
+}
+
+.legenda-img1{
+	text-align: center;
+}
+.texto{
+		
+	margin-top: 10px;
+	width: 60%;
+	text-align: justify;
+}
+.container-artigo1-imagem{
+	margin-top: 3%;
+	width: 35%;
+	display: flex;
+	flex-direction: column;
+}
+
+.imagem-artigo1{
+	height: 30%;
+	width: 100%;
+	box-shadow: -4px -4px 4px 4px  black;
+}
+
+
+
+.artigos{
+	width: 100%;
+}
+.artigos .container{
+
+	border-top: 1px solid white;
+	text-align: justify;
+	width: 77%;
+	margin: auto;
+	background-color: #EEE5DE;
+	padding-left: 5%;
+	padding-right: 5%;	
+	padding-bottom: 2%;
+}
+
+.artigos .container2{
+	border-top: 1px solid white;
+	text-align: justify;
+	width: 77%;
+	margin: auto;
+	background-color: #EEE5DE;
+	padding-left: 5%;
+	padding-right: 5%;	
+	padding-bottom: 2%;
+}
+
+h2 {
+	text-align: left;
+	margin-top: 1px;
+	padding-top: 5%;
+	font-size: 2rem;	
+	font-family: "Arial";
+}
+.artigo2{
+
+	padding: 10px;
+}
+
+.artigo{
+	margin-top: 8%;
+	width: 60%;
+	margin-left: auto;	
+}
+.video{
+	display: flex;
+	justify-content: center;
+
+}
+
+.video-persistencia {
+
+	max-width: 100%;
+	
+}
+.sessao-formulario{
+	width: 100%;		
+	display: flex;
+}
+
+.sessao-formulario .container{
+	display: flex;
+
+			
+	width: 77%;		
+	height: 100%;				
+	margin: auto;
+	padding-left: 5%;
+	padding-right: 5%;	
+	padding-bottom: 2%;
+	background-color: #EEE5DE;
+	border-top: 1px solid white;
+
+}
+.container-form{
+	display: flex;
+	width: 30%;
+    
+		
+
+}
+
+.texto-form{
+	width: 60%;
+	text-align: justify;
+					
+}
+.formulario{
+	
+	padding-bottom: 10%;
+	padding-top: 10%;		
+	text-align: left;
+			
+			
+}
+
+
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    width: 100%;
+    box-shadow: 2px 2px  black;
+}		
+
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+input[type=text],input[type=email] {
+    width: 90%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;			
+    margin-top: 5px;
+    margin-bottom: 5px;	
+
+}
+
+
+p{
+	font-size: 1.2rem;
+}
+.msg-erro{
+	font-size: 10px;
+	color: red;
+	text-align: justify;
+}
