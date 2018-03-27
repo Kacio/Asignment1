@@ -36,7 +36,7 @@ function enviaDados(dadosForm){
 
 	let httpRequest = new XMLHttpRequest();
 
-	let url = "https://my-json-server.typicode.com/typicode/demo/posts"; 
+	let url = "https://gama-experience12.firebaseio.com/visitante.json"; 
 	httpRequest.onload = reqListener;
 	httpRequest.open("post", url, true);
 	httpRequest.setRequestHeader("Content-Type", "application/json");
@@ -44,19 +44,26 @@ function enviaDados(dadosForm){
 }
 
 function validaDados(elemento,span){
-	
-	
 
-	
-		if(elemento.value==""){
-		span.textContent =`Por favor digite o seu ${elemento.id} Completo`;
-		nome.focus();
-		return false;
+		if(elemento.value=="" ||
+			(elemento.id=="email" && !elemento.value.test(/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i))
+			|| (elemento.id=="nome" && elemento.value.split(" ").length<2) ){
+			
+			if(elemento.id=="nome"){
+				span.textContent =`Por favor digite o seu ${elemento.id} Completo`;
+			}else
+			if (elemento.id=="email") {
+				span.textContent =`Por favor digite um ${elemento.id} válido`;
+			}else{
+				span.textContent =`Por favor digite o nome da ${elemento.id} onde trabalha`;
+			}
+			elemento.focus();
+			return false;
 		
-	}else{
+		}else{
 
-		span.textContent = "";
-		return elemento.value;
-	}
+			span.textContent = "";
+			return elemento.value;
+		}
 
 }
