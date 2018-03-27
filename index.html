@@ -79,31 +79,8 @@
 						praesent vehicula accumsan vivamus condimentum pellentesque curae erat dapibus, aliquam hendrerit neque potenti neque urna aptent non bibendum, venenatis tincidunt et accumsan id vestibulum ac. 
 						nec erat est ut fusce enim malesuada varius eleifend odio, senectus pretium quisque faucibus a interdum libero aliquam, mollis litora massa quam curae curabitur lacinia ipsum. 
 					</p>
-					<p>
-						Placerat urna lacinia semper cras velit justo quisque ligula nisl, lorem nostra hac fringilla litora quam justo lorem, tellus tortor leo donec sociosqu nostra nullam aenean. 
-						augue metus pellentesque risus nam pellentesque vestibulum donec id, consectetur litora sociosqu volutpat integer sed iaculis lacus, iaculis aenean pellentesque sodales a auctor nisl. 
-						commodo cubilia arcu nisl cubilia habitant etiam vehicula potenti turpis, urna amet enim proin fringilla felis semper lorem faucibus, netus pharetra turpis ipsum ultrices libero etiam magna. 
-						eleifend lacinia ipsum tellus maecenas condimentum aliquam accumsan commodo pretium maecenas nulla, risus volutpat tempor non consectetur facilisis tortor molestie facilisis et, lectus euismod etiam eu velit malesuada lacus erat ad ullamcorper. 
-					</p>
-					<p>
-						Torquent pulvinar nunc pellentesque luctus sem elementum ipsum habitant, varius netus nulla himenaeos est mollis nec. 
-						luctus egestas porttitor eget varius nisl aptent habitasse praesent lorem ut sed, orci potenti aliquet tincidunt curabitur integer sollicitudin aliquam elit nullam. 
-						accumsan per sollicitudin tempor congue ornare dui vel dapibus cras, ultricies ornare egestas vehicula pretium inceptos elementum aliquam sem phasellus, primis morbi fermentum sem cras auctor inceptos mi. 
-						aliquet nunc porta felis donec pharetra amet congue semper fringilla etiam commodo, sed lectus diam etiam pharetra sem imperdiet non amet integer rutrum, hendrerit varius class convallis tincidunt lobortis consectetur suspendisse velit torquent. 
-					</p>
-					<p>
-						Viverra quis ut torquent himenaeos etiam nullam vestibulum ante pulvinar, tristique feugiat est curabitur quam mi laoreet. 
-						enim sociosqu convallis posuere suspendisse netus tristique amet class tempor, vitae habitant placerat luctus arcu erat libero volutpat, malesuada placerat sollicitudin accumsan dapibus praesent maecenas elit. 
-						nam convallis lobortis suspendisse dictum congue dolor habitasse viverra dictumst lacinia, mattis aptent nisi viverra velit eu per consequat. 
-						suscipit pellentesque molestie litora aliquet class feugiat lacus accumsan egestas, adipiscing cubilia metus non quisque integer cursus et. 
-						commodo consectetur varius velit est conubia tincidunt lacus consectetur mattis leo metus erat, sollicitudin placerat sociosqu vestibulum luctus nec class inceptos urna sapien dictum. 
-					</p>
-					<p>
-						Mi senectus quis conubia at mauris duis libero eget, volutpat ornare mattis vivamus interdum ad felis quisque, pharetra vel sem quisque aenean est primis. 
-						eu quisque sem convallis condimentum faucibus sociosqu facilisis, dui molestie curabitur volutpat torquent nullam ut senectus, leo laoreet dui lacus nibh augue. 
-						himenaeos nunc accumsan primis aenean ullamcorper cubilia urna massa, mollis iaculis arcu auctor vestibulum sagittis mollis, platea nunc metus et varius nunc aliquet. 
-						mi per a rhoncus lobortis bibendum, primis curabitur vulputate. 
-					</p>
+					
+				
 				</article>
 			</div>	
 			<div class="container2" id="artigo2">
@@ -166,28 +143,40 @@
 					
 					<div class="container-form">
 							
-						<form class="formulario" id="formulario" onsubmit="validaFormulario(event)">
+						<form class="formulario" id="formulario" onsubmit="validaForm(event)">
 
  							<strong>Nome Completo:</strong><br>
  							<span class="msg-erro" name="span_nome" id="erro-nome"></span>
-  							<input type="text" name="nome"  id="nome" required="required" placeholder="Escreva seu nome Completo" autofocus><br>
+  							<input type="text" name="nome"  id="nome"  placeholder="Escreva seu nome Completo" autofocus><br>
   							<strong>Email:</strong>
   							<span class="msg-erro" name="span_email" id="erro-email"></span>
-  							<input type="email" name="email" id="email" required="required" placeholder="Digite seu email exemplo@dominio"><br>		
+  							<input type="email" name="email" id="email"  placeholder="Digite seu email exemplo@dominio"><br>		
   							<strong>Empresa:</strong>
   							<span class="msg-erro" name="span_empresa" id="erro-empresa"></span>
   							<input type="text" name="empresa" id="empresa" required="required" placeholder="Digite o nome da sua empresa">	
 
   							<br>
-  							<input type="submit" name="botao-enviar " id="botao-enviar" onclick="validaForm(event)" >	
+  							<input type="submit" name="botao-enviar " id="botao-enviar"  >	
 						</form>
 					</div>
 				</div>
 			
 		</section>	
-
+		<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyBf6XK4cwDuoGTzvi_qp8UkPpikG13Ng_8",
+		    authDomain: "gama-experience12.firebaseapp.com",
+		    databaseURL: "https://gama-experience12.firebaseio.com",
+		    projectId: "gama-experience12",
+		    storageBucket: "gama-experience12.appspot.com",
+		    messagingSenderId: "56913518997"
+		  };
+		  firebase.initializeApp(config);
+		</script>
 		<script type="text/javascript" src="js/validacao.js"></script>	
-		<script type="text/javascript"></script>
+		
 	</main>
 	<div class="container-rodape">
 		<footer class="rodape">&copy;AprendenDO 2018</footer>

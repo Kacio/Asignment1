@@ -124,7 +124,7 @@
 }
 
 .imagem-artigo1{
-	height: 30%;
+	height: 50%;
 	width: 100%;
 	box-shadow: -4px -4px 4px 4px  black;
 }
@@ -264,4 +264,20 @@ p{
 	font-size: 10px;
 	color: red;
 	text-align: justify;
+}
+/*mobile*/
+@media(max-width: 768px){
+.cabecalho-principal .container{
+	
+	flex-direction: column;
+	width: 100%;
+}
+
+
+.cabecalho-principal{
+	width: 100%;
+	flex-direction: column;
+
+}
+
 }
