@@ -14,17 +14,19 @@ function validaForm(event){
 	var nomeValido=validaDados(nome,span_nome);
 	var emailValido=validaDados(email,span_email);
 	var empresaValida=validaDados(empresa,span_empresa);
+	
+	if(nomeValido && emailValido && empresaValida){
+		var jsonDadosValidados={
+			nome : nome.value,
+			email : email.value,
+			empresa : empresa.value
+		}
 
-	var jsonDadosValidados={
-		nome : nomeValido,
-		email : emailValido,
-		empresa : empresaValida
+
+
+		enviaDados(JSON.stringify(jsonDadosValidados));
+		limpaForm(nome,email,empresa);
 	}
-
-
-
-	enviaDados(JSON.stringify(jsonDadosValidados));
-		
 	
 }
 
@@ -41,12 +43,13 @@ function enviaDados(dadosForm){
 	httpRequest.open("post", url, true);
 	httpRequest.setRequestHeader("Content-Type", "application/json");
 	httpRequest.send(dadosForm);
+	
 }
 
 function validaDados(elemento,span){
 
 		if(elemento.value=="" ||
-			(elemento.id=="email" && !elemento.value.test(/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i))
+			(elemento.id=="email" && (!/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/.test(elemento.value)))
 			|| (elemento.id=="nome" && elemento.value.split(" ").length<2) ){
 			
 			if(elemento.id=="nome"){
@@ -63,7 +66,14 @@ function validaDados(elemento,span){
 		}else{
 
 			span.textContent = "";
-			return elemento.value;
+			return true;
 		}
 
+}
+
+function limpaForm(nome,email,empresa){
+	nome.value = "";
+	email.value = "";
+	empresa.value="";
+	nome.focus();
 }
