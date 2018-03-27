@@ -65,7 +65,8 @@
 	margin-right: 9px;
 	left: 8px;
 	right: 0;
-	font-family: "Arial"
+	font-family: "Arial";
+
 	
 }
 .container-rodape{
@@ -200,6 +201,7 @@ h3{
 .sessao-formulario{
 	width: 100%;		
 	display: flex;
+
 }
 
 .sessao-formulario .container{
@@ -209,6 +211,7 @@ h3{
 	width: 77%;		
 	height: 100%;				
 	margin: auto;
+	margin-bottom: 3%;
 	padding-left: 5%;
 	padding-right: 5%;	
 	padding-bottom: 2%;
@@ -227,6 +230,7 @@ h3{
 .texto-form{
 	width: 60%;
 	text-align: justify;
+
 					
 }
 .formulario{
